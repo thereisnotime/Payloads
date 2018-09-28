@@ -3,14 +3,10 @@ color 0a
 title Some mad hacking skills are being used...
 echo Please wait, hacking your computer...
 :: Variables
-SET imagesrc=https://i.imgur.com/zBEeofi.png
-SET imagepng=%temp%\hacked.png
+SET imagesrc=https://raw.githubusercontent.com/thereisnotime/Payloads/master/HACKEDBG.bmp
 SET imagebmp=%temp%\hacked.bmp
 :: Download image
-START /B /wait "" "cmd /c bitsadmin.exe /transfer GETTINGHACKS... %imagesrc% %imagepng%"
-:: Convert image
-:: convert %imagepng% -type truecolor %imagebmp%
-rename "%imagepng%" "hacked.bmp"
+START /B /wait "" "cmd /c bitsadmin.exe /transfer GETTINGHACKS... %imagesrc% %imagebmp%"
 :: Set wallpaper
 :checkagain
 if exist "%imagebmp%" (
