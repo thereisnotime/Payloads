@@ -22,4 +22,5 @@ if exist "%imagebmp%" (
     goto:checkagain
 )
 echo Hacked. Have a nice day
-exit
+call getCmdPid.bat 
+taskkill /pid %errorlevel%
