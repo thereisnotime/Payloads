@@ -27,3 +27,4 @@ if exist C:\Users\n\Pictures\HACKEDBG.bmp (
 echo Hacked. Have a nice day
 pause
 :: end
+
