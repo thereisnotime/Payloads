@@ -15,11 +15,10 @@ if exist "%imagebmp%" (
 	reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v TileWallpaper /t REG_SZ /d 0 /f >nul
 	reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%imagebmp%" /f >nul
 	echo Evil deed is done.
-	%SystemRoot%\System32\RUNDLL32.EXE user32.dll, UpdatePerUserSystemParameters
+	RUNDLL32.EXE user32.dll, UpdatePerUserSystemParameters
 	rem RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 ) else (
 	echo Image not found...
     goto:checkagain
 )
 echo Hacked. Have a nice day
-pause
