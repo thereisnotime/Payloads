@@ -1,4 +1,3 @@
-
 @echo off
 color 0a
 title Some mad hacking skills are being used...
