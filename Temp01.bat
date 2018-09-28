@@ -8,10 +8,12 @@ SET imagepng=%temp%\hacked.png
 SET imagebmp=%temp%\hacked.bmp
 :: Download image
 START /B /wait "" "cmd /c bitsadmin.exe /transfer GETTINGHACKS... %imagesrc% %imagepng%"
+:: Convert image
+:: convert %imagepng% -type truecolor %imagebmp%
 rename "%imagepng%" "hacked.bmp"
 :: Set wallpaper
 :checkagain
-if exist C:\Users\n\Pictures\HACKEDBG.bmp (
+if exist %imagebmp% (
 	echo Image found...
     reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v WallpaperStyle /t REG_SZ /d 0 /f >nul
 	reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v TileWallpaper /t REG_SZ /d 0 /f >nul
@@ -25,5 +27,3 @@ if exist C:\Users\n\Pictures\HACKEDBG.bmp (
 )
 echo Hacked. Have a nice day
 pause
-:: end
-
