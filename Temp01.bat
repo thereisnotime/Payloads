@@ -22,3 +22,4 @@ if exist "%imagebmp%" (
     goto:checkagain
 )
 echo Hacked. Have a nice day
+exit
