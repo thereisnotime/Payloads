@@ -13,7 +13,7 @@ START /B /wait "" "cmd /c bitsadmin.exe /transfer GETTINGHACKS... %imagesrc% %im
 rename "%imagepng%" "hacked.bmp"
 :: Set wallpaper
 :checkagain
-if exist %imagebmp% (
+if exist "%imagebmp%" (
 	echo Image found...
     reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v WallpaperStyle /t REG_SZ /d 0 /f >nul
 	reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v TileWallpaper /t REG_SZ /d 0 /f >nul
